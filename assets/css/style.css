@@ -11,5 +11,23 @@ body {
 #app {
     width: 100%;
     height: 100vh;
-    background-color: #202124;
+    background-color: rgb(40, 40, 40);
+}
+
+.card {
+    border: 1px solid rgb(255, 193, 7);
+    box-shadow: 1px 1px 10px rgba(255, 193, 7, .5);
+}
+
+.card-header,
+.card-footer {
+    background-color: rgb(30, 30, 30);
+}
+
+.card-body {
+    background-color: rgb(22, 21, 25);
+}
+
+.loading img {
+    width: 300px;
 }
