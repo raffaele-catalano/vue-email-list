@@ -29,5 +29,6 @@ body {
 }
 
 .loading img {
-    width: 338px;
+    width: 341px;
+    cursor: progress;
 }

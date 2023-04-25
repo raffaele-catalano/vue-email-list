@@ -20,14 +20,14 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.js' integrity='sha512-//dh2f858Fr7wqGN0IrKqOwzFRMSNDFepYnq0R0Nau+vpQRaUYwViFi7KVniyCALFPOaaMd1n38d5q0pboHjUw==' crossorigin='anonymous'></script>
     <!-- Css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Vue Mailing List</title>
+    <title>Mail Platform</title>
 </head>
 
 <body>
     
     <div id="app" class="d-flex justify-content-center align-items-center flex-column">
 
-        <h1 class="text-warning fw-bold">Welcome to Mail Platform</h1>
+        <h1 class="text-warning fw-bold mb-4">Welcome to Mail Platform</h1>
 
         <div class="card text-light" style="width: 25rem;">
 
@@ -40,11 +40,8 @@
                     <span>
                         Click on <span class="text-warning">Generate</span> to get 10 mail address
                         <span class="d-block">or</span>
-                        Click on <span class="text-danger">Reset</span> to remove it
+                        Click on <span class="text-danger">Reset</span> to remove them.
                     </span>
-                    <!-- <p>Click on <span>Generate</span> to get 10 mail address</p>
-                    <p>or</p>
-                    <p>Click on <span>Reset</span> to remove it</p> -->
 
                 </div>
 
@@ -57,7 +54,7 @@
                     <img src="assets/img/loading.gif" alt="loading">
                 </div>
             </div>
-            <div class="card-footer d-flex justify-content-center">
+            <div class="card-footer d-flex justify-content-center p-3">
                 <button type="button" class="btn btn-outline-warning me-2" @click="getMailList()">Generate</button>
                 <button type="button" class="btn btn-outline-danger" @click="resetMailList()">Reset</button>
             </div>
