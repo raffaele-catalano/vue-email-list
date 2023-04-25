@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/mail-list-favicon.png" type="png">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,21 +26,40 @@
 <body>
     
     <div id="app" class="d-flex justify-content-center align-items-center flex-column">
+
         <h1 class="text-warning fw-bold">Welcome to Mail Platform</h1>
+
         <div class="card text-light" style="width: 25rem;">
-            <div class="card-header d-flex justify-content-center">
-                <h5>Mailing List</h5>
+
+            <div class="card-header d-flex align-items-center flex-column">
+
+                <h4 class="fw-bold">Mailing List</h4>
+
+                <div class="description d-flex justify-content-center text-center">
+
+                    <span>
+                        Click on <span class="text-warning">Generate</span> to get 10 mail address
+                        <span class="d-block">or</span>
+                        Click on <span class="text-danger">Reset</span> to remove it
+                    </span>
+                    <!-- <p>Click on <span>Generate</span> to get 10 mail address</p>
+                    <p>or</p>
+                    <p>Click on <span>Reset</span> to remove it</p> -->
+
+                </div>
+
             </div>
             <div class="card-body">
-                <ul v-if="mailList.length >= 10">
-                    <li>List Item</li>
+                <ul v-if="mailList.length === 10">
+                    <li v-for="mailAddress in mailList" class="p-1">{{mailAddress}}</li>
                 </ul>
                 <div v-else class="loading d-flex justify-content-center">
                     <img src="assets/img/loading.gif" alt="loading">
                 </div>
             </div>
             <div class="card-footer d-flex justify-content-center">
-                <h5>Footer</h5>
+                <button type="button" class="btn btn-outline-warning me-2" @click="getMailList()">Generate</button>
+                <button type="button" class="btn btn-outline-danger" @click="resetMailList()">Reset</button>
             </div>
         </div>
     </div>
